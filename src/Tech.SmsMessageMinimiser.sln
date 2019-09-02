@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tech.SmsMessageMinimiser", "Tech.SmsMessageMinimiser\Tech.SmsMessageMinimiser.csproj", "{1532C6EB-A2DB-4B55-A4CE-114029D07749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech.SmsMessageMinimiser.Tests", "Tech.SmsMessageMinimiser.Tests\Tech.SmsMessageMinimiser.Tests.csproj", "{29A5B568-4867-4853-ACE6-B7D60C74DE74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1532C6EB-A2DB-4B55-A4CE-114029D07749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1532C6EB-A2DB-4B55-A4CE-114029D07749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1532C6EB-A2DB-4B55-A4CE-114029D07749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1532C6EB-A2DB-4B55-A4CE-114029D07749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A5B568-4867-4853-ACE6-B7D60C74DE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A5B568-4867-4853-ACE6-B7D60C74DE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A5B568-4867-4853-ACE6-B7D60C74DE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A5B568-4867-4853-ACE6-B7D60C74DE74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC015C44-80F5-4DC1-8896-100AB9C518DA}
+	EndGlobalSection
+EndGlobal
