@@ -36,7 +36,7 @@ steps:
   displayName: 'NuGet publish'
   inputs:
     command: 'push'
-    packagesToPush: '**/*.nupkg'
+    packagesToPush: '**/Tech.SmsMessageMinimiser*.nupkg'
     nuGetFeedType: 'internal'
     publishVstsFeed: '33312d7f-ae99-4c36-ba06-9c6bca94148e'
     verbosityPush: 'Normal'
