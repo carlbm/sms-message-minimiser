@@ -2,6 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>0.0.2-alpha</Version>
+    <Authors>Carl Berisford-Murray</Authors>
+    <Company>Techcellence Consulting Ltd</Company>
+    <Description>Sms encoder and cost minimiser</Description>
+    <Copyright>2019 Techcellence Consulting Ltd</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/carlbm/sms-message-minimiser</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/carlbm/sms-message-minimiser/blob/master/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/carlbm/sms-message-minimiser</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
