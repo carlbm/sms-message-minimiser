@@ -31,3 +31,9 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet publish'
+  inputs:
+    command: push
+    publishVstsFeed: '33312d7f-ae99-4c36-ba06-9c6bca94148e'
