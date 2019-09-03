@@ -2,7 +2,7 @@
 
 namespace Tech.SmsMessageMinimiser.GsmShiftTables
 {
-    public class Basic
+    public class BasicCharacterSet
     {
         public int Priority => 0;
         public string Udh => "";

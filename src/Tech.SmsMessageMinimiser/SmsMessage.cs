@@ -1,8 +1,19 @@
 ﻿namespace Tech.SmsMessageMinimiser
 {
-    public class SmsMessage
+    public sealed class SmsMessage
     {
-        public string Udh { get; set; }
-        public string Payload { get; set; }
+        internal SmsMessage(string message)
+        {
+            Payload = message;
+        }
+
+        internal SmsMessage(string message, string udh)
+        {
+            Payload = message;
+            Udh = udh;
+        }
+
+        public string Udh { get; } = string.Empty;
+        public string Payload { get; }
     }
 }
