@@ -39,30 +39,19 @@ steps:
   displayName: 'Nuget pack'
   inputs:
     command: 'pack'
-    packagesToPack: '**/*.csproj'
+    packagesToPack: '**/Tech.SmsMessageMinimiser.csproj'
     versioningScheme: 'byPrereleaseNumber'
     majorVersion: '0'
     minorVersion: '0'
-    patchVersion: '$(Build.BuildNumber)'
+    patchVersion: '$(r)'
+    packDestination: '$(Build.ArtifactStagingDirectory)'
     
-
-- task: CopyFiles@2
-  inputs:
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
-
 
 - task: NuGetCommand@2
   displayName: 'NuGet publish'
   inputs:
     command: 'push'
-    packagesToPush: '**/Tech.SmsMessageMinimiser*.nupkg'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/Tech.SmsMessageMinimiser*.nupkg'
     nuGetFeedType: 'internal'
     publishVstsFeed: '33312d7f-ae99-4c36-ba06-9c6bca94148e'
     verbosityPush: 'Normal'
