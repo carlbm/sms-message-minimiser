@@ -2,6 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>$Id$</id>
+    <version>$Version</version>
     <authors>Carl Berisford-Murray</authors>
     <owners>Techcellence Consulting Ltd</owners>
     <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
