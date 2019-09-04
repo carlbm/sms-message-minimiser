@@ -43,7 +43,7 @@ steps:
     versioningScheme: 'byPrereleaseNumber'
     majorVersion: '0'
     minorVersion: '0'
-    patchVersion: '$(Rev:r)'
+    patchVersion: '$(rev:r)'
     packDestination: '$(Build.ArtifactStagingDirectory)'
     
 
