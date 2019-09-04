@@ -3,6 +3,8 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
+continueOnError: true
+
 trigger:
 - master
 
@@ -44,15 +46,6 @@ steps:
     patchVersion: '$(Build.BuildNumber)'
     
 
-- task: NuGetCommand@2
-  displayName: 'NuGet publish'
-  inputs:
-    command: 'push'
-    packagesToPush: '**/Tech.SmsMessageMinimiser*.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '33312d7f-ae99-4c36-ba06-9c6bca94148e'
-    verbosityPush: 'Normal'
-
 - task: CopyFiles@2
   inputs:
     SourceFolder: '*'
@@ -65,3 +58,13 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+
+- task: NuGetCommand@2
+  displayName: 'NuGet publish'
+  inputs:
+    command: 'push'
+    packagesToPush: '**/Tech.SmsMessageMinimiser*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '33312d7f-ae99-4c36-ba06-9c6bca94148e'
+    verbosityPush: 'Normal'
+    
