@@ -4,6 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 continueOnError: true
+name: $(Rev:rrr)-alpha
 
 trigger:
 - master
@@ -43,7 +44,7 @@ steps:
     versioningScheme: 'byPrereleaseNumber'
     majorVersion: '0'
     minorVersion: '0'
-    patchVersion: '$(rev:r)'
+    patchVersion: '0'
     packDestination: '$(Build.ArtifactStagingDirectory)'
     
 
