@@ -4,6 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 continueOnError: true
+name: $(majorMinorVersion).$(semanticVersion)-$(designation)
 
 trigger:
 - master
@@ -18,7 +19,6 @@ variables:
   majorMinorVersion: 0.0
   semanticVersion: $[counter(variables['majorMinorVersion'], 0)]
   designation: 'alpha'
-  BUILD_BUILDNUMBER: $(majorMinorVersion).$(semanticVersion)-$(designation)
 
 steps:
 - task: NuGetToolInstaller@1
