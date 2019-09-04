@@ -47,6 +47,7 @@ steps:
     versioningScheme: byEnvVar
     packDestination: '$(Build.ArtifactStagingDirectory)'
     versionEnvVar: BUILDNO
+    buildProperties: PackageProjectUrl=https://github.com/carlbm/sms-message-minimiser;PackageIconUrl=https://github.com/carlbm/sms-message-minimiser/blob/master/logo.png
     
 
 - task: NuGetCommand@2
