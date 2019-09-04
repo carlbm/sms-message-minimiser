@@ -46,6 +46,7 @@ steps:
     packagesToPack: '**/Tech.SmsMessageMinimiser.csproj'
     versioningScheme: byEnvVar
     packDestination: '$(Build.ArtifactStagingDirectory)'
+    versionEnvVar: $(name)
     
 
 - task: NuGetCommand@2
