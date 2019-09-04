@@ -48,7 +48,6 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '*'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
