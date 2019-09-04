@@ -7,7 +7,7 @@
     <owners>Techcellence Consulting Ltd</owners>
     <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
     <projectUrl>https://github.com/carlbm/sms-message-minimiser</projectUrl>
-    <iconUrl>https://github.com/carlbm/sms-message-minimiser/blob/master/logo.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/carlbm/sms-message-minimiser/master/logo.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Sms encoder and cost minimiser</description>
     <releaseNotes></releaseNotes>
