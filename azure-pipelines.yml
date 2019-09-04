@@ -18,7 +18,7 @@ variables:
   majorMinorVersion: 0.0
   semanticVersion: $[counter(variables['majorMinorVersion'], 0)]
   designation: 'alpha'
-  BUILD_BUILDNUMBER: $(majorMinorVersion).$(semanticVersion)-'$(designation)'
+  BUILD_BUILDNUMBER: $(majorMinorVersion).$(semanticVersion)-$(designation)
 
 steps:
 - task: NuGetToolInstaller@1
