@@ -19,21 +19,34 @@ namespace Tech.SmsMessageMinimiser
         {
             var shiftTable = new BasicCharacterSet();
             var messages = new List<SmsMessage>();
+            IAmACharacterSet matchingCharacterSet = null;
 
-            if (message.All(x => shiftTable.Characters.ContainsKey(x)))
+            if (message.All(x => shiftTable.BasicCharacters.ContainsKey(x) ||
+                                 shiftTable.ShiftedCharacters.ContainsKey(x)))
             {
-                // All characters are accounted for
-                messages.Add(new SmsMessage(message));
+                matchingCharacterSet = new BasicCharacterSet();
             }
-            else
+
+            if (matchingCharacterSet == null)
             {
-                var stringBuilder = new StringBuilder();
-                foreach (var character in message)
+                return new SmsMessageGroup(messages);
+            }
+
+            var stringBuilder = new StringBuilder();
+            foreach (var character in message)
+            {
+                if (matchingCharacterSet.ShiftedCharacters.ContainsKey(character))
                 {
-                    stringBuilder.Append(shiftTable.Characters[character]);
+                    stringBuilder.Append(matchingCharacterSet.ShiftCharacter.ToString("x2"));
+                    stringBuilder.Append(matchingCharacterSet.ShiftedCharacters[character].ToString("x2"));
+                }
+                else
+                {
+                    stringBuilder.Append(matchingCharacterSet.BasicCharacters[character].ToString("x2"));
                 }
             }
-
+            messages.Add(new SmsMessage(stringBuilder.ToString(), matchingCharacterSet.Udh));
+            
             return new SmsMessageGroup(messages);
         }
     }

@@ -18,7 +18,7 @@ namespace Tech.SmsMessageMinimiser.Tests.GivenAMessageMinimiser
         public class WithABasicMessage
         {
             [Theory]
-            [InlineAutoData("a test message", "a test message")]
+            [InlineAutoData("a test message with a £ symbol and a € symbol", "612074657374206d6573736167652077697468206120012073796d626f6c20616e642061201b652073796d626f6c")]
             public void ThenPayloadIsUntransformed(string testMessage, string expected, MessageMinimiser sut)
             {
                 var actual = sut.MinimiseMessage(testMessage);
@@ -114,6 +114,18 @@ namespace Tech.SmsMessageMinimiser.Tests.GivenAMessageMinimiser
         {
             [Theory]
             [InlineAutoData("c'est envoyé")]
+            public void ThenTheyUseTheBasicCharacterSet(string testMessage, MessageMinimiser sut)
+            {
+                var actual = sut.MinimiseMessage(testMessage);
+
+                actual.SmsMessages[0].Udh.Should().BeEmpty();
+            }
+        }
+
+        public class WithABasicShiftedCharacter
+        {
+            [Theory]
+            [InlineAutoData("a £ and a €")]
             public void ThenTheyUseTheBasicCharacterSet(string testMessage, MessageMinimiser sut)
             {
                 var actual = sut.MinimiseMessage(testMessage);

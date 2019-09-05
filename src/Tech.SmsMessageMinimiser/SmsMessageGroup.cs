@@ -48,7 +48,7 @@ namespace Tech.SmsMessageMinimiser
                 return 0;
             }
 
-            var length = message.Length + doubleCharacterCount + headerLength;
+            var length = (message.Length + doubleCharacterCount) / 2 + headerLength;
             if (length <= 160)
             {
                 return 1;

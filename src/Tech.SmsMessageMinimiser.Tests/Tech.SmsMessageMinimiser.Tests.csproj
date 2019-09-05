@@ -83,6 +83,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GivenAMessageMinimiser\WhenCallingMinimiseMessage.cs" />
+    <Compile Include="GivenAnSmsMessage\WhenCallingHeaderSize.cs" />
+    <Compile Include="GivenAnSmsMessage\WhenCallingMessageSize.cs" />
+    <Compile Include="GivenAnSmsMessage\WhenCallingNumberOfPartsToSendInAConcatenatedMessage.cs" />
+    <Compile Include="GivenAnSmsMessage\WhenCallingPayloadLengthForConcatenatedMessage.cs" />
+    <Compile Include="GivenAPhysicalSmsService\WhenCallingConcatenateMessages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
